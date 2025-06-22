@@ -1,3 +1,5 @@
+window.addEventListener("DOMContentLoaded", () => {
+
 const slides = [
   {
     image: "slide1.jpg",
@@ -25,8 +27,8 @@ const nextBtn = document.getElementById("arrow_right");
 const tagline = document.getElementById("tagline");
 
 function showSlide(index) {
-  slideImg.src = `./assets/images/slideshow/${slides[index].image}`;
-  tagline.innerHTML = slides[index].tagLine;
+  	slideImg.src = `./assets/images/slideshow/${slides[index].image}`;
+	tagline.innerHTML = slides[index].tagLine; 
 }
 
 prevBtn.addEventListener("click", () => {
@@ -39,5 +41,5 @@ nextBtn.addEventListener("click", () => {
   showSlide(currentIndex);
 });
 
-/* Afficher la première image au chargement */
 showSlide(currentIndex);
+});
